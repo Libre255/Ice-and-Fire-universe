@@ -1,7 +1,7 @@
-import { HousesType } from "./HousesType";
+import { HouseType } from "./HouseType";
 
-export const getHouses = async():Promise<HousesType[]>=>{
-    const getData = await fetch('https://www.anapioficeandfire.com/api/houses');
-    const data = getData.json()
-    return data
-}
+export const getHouses = async (): Promise<HouseType[]> => {
+  const getData = await fetch("https://www.anapioficeandfire.com/api/houses");
+  const data = getData.json();
+  return data;
+};
