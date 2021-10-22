@@ -5,11 +5,48 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #010001;
+    width: 100vw;
 }
 
 code {
 font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family: 'got font';
+  src: url('Common/Fonts/Game\ of\ Thrones.ttf');
+}
 
+@mixin flexCenter(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin iPadPort {
+  @media (orientation:portrait)and (min-width:768px){
+    @content;
+  }
+}
+
+@mixin iPadLand {
+  @media (orientation:landscape) and (min-width:1024px){
+    @content;
+  }
+}
+
+@mixin LaptopVersion {
+  @media (min-width:1440px){
+    @content;
+  }
+}
+
+@mixin Full1080pVersion {
+  @media (orientation:landscape) and (min-width:1920px){
+    @content;
+  }
+}
+@import './Common/CSS/Hero';
+@import './Logo/CSS/Logo';
 @import './Houses/CSS/HousesList';
