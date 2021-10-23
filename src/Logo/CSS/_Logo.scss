@@ -3,7 +3,7 @@
     justify-content: center;
     h1{
         color: whitesmoke;
-        font-size: 1em;
+        font-size: calc(1em + (13 - 1) * ((100vw - 320px) / (1920 - 375)));
         font-family: 'got font';
         align-self: flex-end;
         text-shadow: 2px 2px black;
@@ -31,9 +31,6 @@
 
 @include iPadLand{
     #logo{
-        h1{
-            font-size: 1.5em;
-        }
         img{
             width: 10vw;
         }
@@ -42,9 +39,6 @@
 
 @include LaptopVersion{
     #logo{
-        h1{
-            font-size: 2em;
-        }
         img{
             width: 8vw;
         }
@@ -53,9 +47,6 @@
 
 @include Full1080pVersion{
     #logo{
-        h1{
-            font-size: 2.5em;
-        }
         img{
             width: 5vw;
         }
