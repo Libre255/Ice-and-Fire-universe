@@ -5,6 +5,8 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #010001;
+    width: 100vw;
 }
 
 code {
@@ -12,4 +14,13 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
+@font-face {
+  font-family: 'got font';
+  src: url('Common/Fonts/Game\ of\ Thrones.ttf');
+}
+
+@import './Common/CSS/MediaQueryMixins';
+@import './Common/CSS/CustomMixins';
+@import './Common/CSS/Hero';
+@import './Logo/CSS/Logo';
 @import './Houses/CSS/HousesList';

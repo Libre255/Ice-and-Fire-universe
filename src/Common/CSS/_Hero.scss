@@ -1,0 +1,36 @@
+#hero{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('Common/Img/background1.png');
+    background-size: 300vw;
+    background-position:center;
+    @include flexCenter();
+
+    #wrapper{
+        margin: 0 auto;
+        height: 90vh;
+        width: 100%;
+    } 
+}
+
+@include iPadLand{
+    #hero{
+        background-size: 140vw;
+        #wrapper{
+            align-self: flex-start;
+            width: 90%;
+        }
+    }
+}
+
+@include LaptopVersion {
+    #hero{
+        margin: 0 auto;
+        width: 85vw;
+        background-size: contain;
+        background-repeat: no-repeat;
+        #wrapper{
+          align-self:center;
+        } 
+    }
+}

@@ -1,0 +1,55 @@
+#logo{
+    display: flex;
+    justify-content: center;
+    h1{
+        color: whitesmoke;
+        font-size: calc(1em + (13 - 1) * ((100vw - 320px) / (1920 - 375)));
+        font-family: 'got font';
+        align-self: flex-end;
+        text-shadow: 2px 2px black;
+        span{
+            &:nth-child(1){
+                color: #92e6ee;
+            }
+            &:nth-child(2){
+                color:#e3afae;
+            }
+        }
+    }
+    img{
+        width:15vw;
+    }
+}
+
+@include iPadPort {
+    #logo{
+        h1{
+            font-size: 2em;
+        }
+    }
+}
+
+@include iPadLand{
+    #logo{
+        img{
+            width: 10vw;
+        }
+    }
+}
+
+@include LaptopVersion{
+    #logo{
+        img{
+            width: 8vw;
+        }
+    }
+}
+
+@include Full1080pVersion{
+    #logo{
+        img{
+            width: 5vw;
+        }
+    }
+}
+
