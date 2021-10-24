@@ -4,12 +4,15 @@
     background-image: url('Common/Img/background1.png');
     background-size: 300vw;
     background-position:center;
+    background-repeat: repeat-y;
     @include flexCenter();
 
     #wrapper{
-        margin: 0 auto;
-        height: 90vh;
         width: 100%;
+        height: 90vh;
+        // border: 1px solid red;
+        margin: 0 auto;
+        overflow: scroll;
     } 
 }
 
@@ -17,8 +20,9 @@
     #hero{
         background-size: 140vw;
         #wrapper{
-            align-self: flex-start;
             width: 90%;
+            height: 100vh;
+            align-self: flex-start;
         }
     }
 }
@@ -26,11 +30,23 @@
 @include LaptopVersion {
     #hero{
         margin: 0 auto;
-        width: 85vw;
+        width: 100vw;
         background-size: contain;
         background-repeat: no-repeat;
+
         #wrapper{
           align-self:center;
+          width: 50%;
+          height: 90vh;
         } 
+    }
+}
+
+@include Full1080pVersion {
+    #hero{
+        #wrapper{
+            overflow: unset;
+            width: 40%;
+        }
     }
 }

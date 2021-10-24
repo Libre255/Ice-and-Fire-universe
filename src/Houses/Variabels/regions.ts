@@ -5,38 +5,38 @@ export interface RegionsType {
 export const regions: RegionsType[] = [
     {
       name: "the North",
-      imgUrl: "/img/1",
+      imgUrl: "/img/1.png",
     },
     {
       name: "the Iron Islands",
-      imgUrl: "/img/4",
+      imgUrl: "/img/4.png",
     },
     {
      name: "the Riverlands",
-      imgUrl: "/img/3",
+      imgUrl: "/img/3.png",
     },
     {
         name: "the Vale",
-      imgUrl: "/img/2",
+      imgUrl: "/img/2.png",
     },
     {
         name: "the Westerlands",
-      imgUrl: "/img/5",
+      imgUrl: "/img/5.png",
     },
     {
         name: "the Stormlands",
-      imgUrl: "/img/6",
+      imgUrl: "/img/6.png",
     },
     {
         name: "the Reach",
-      imgUrl: "/img/7",
+      imgUrl: "/img/7.png",
     },
     {
         name: "the Crownlands",
-      imgUrl: "/img/9",
+      imgUrl: "/img/9.png",
     },
     {
         name: "Dorne",
-      imgUrl: "/img/8",
+      imgUrl: "/img/8.png",
     },
   ];

@@ -22,6 +22,7 @@ code {
   background-image: url("Common/Img/background1.png");
   background-size: 300vw;
   background-position: center;
+  background-repeat: repeat-y;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,9 +35,10 @@ code {
 }
 
 #hero #wrapper {
-  margin: 0 auto;
-  height: 90vh;
   width: 100%;
+  height: 90vh;
+  margin: 0 auto;
+  overflow: scroll;
 }
 
 @media (min-width: 1024px) {
@@ -44,16 +46,17 @@ code {
     background-size: 140vw;
   }
   #hero #wrapper {
+    width: 90%;
+    height: 100vh;
     -ms-flex-item-align: start;
         align-self: flex-start;
-    width: 90%;
   }
 }
 
 @media (min-width: 1440px) {
   #hero {
     margin: 0 auto;
-    width: 85vw;
+    width: 100vw;
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -61,6 +64,15 @@ code {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    width: 50%;
+    height: 90vh;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1920px) {
+  #hero #wrapper {
+    overflow: unset;
+    width: 40%;
   }
 }
 
@@ -94,7 +106,7 @@ code {
   width: 15vw;
 }
 
-@media (orientation: portrait) and (min-width: 768px) {
+@media (min-width: 768px) {
   #logo h1 {
     font-size: 2em;
   }
@@ -115,6 +127,62 @@ code {
 @media (orientation: landscape) and (min-width: 1920px) {
   #logo img {
     width: 5vw;
+  }
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 5vw;
+}
+
+main section {
+  padding-bottom: 2vw;
+}
+
+main section img {
+  width: 35vw;
+  border: 3px solid black;
+  border-radius: 100px;
+}
+
+main section img:hover {
+  -webkit-box-shadow: 0 0 20px white;
+          box-shadow: 0 0 20px white;
+}
+
+@media (min-width: 768px) {
+  main section img {
+    width: 25vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    margin-top: 0;
+  }
+  main section img {
+    width: 15vw;
+  }
+}
+
+@media (min-width: 1440px) {
+  main {
+    margin-top: 0;
+  }
+  main section img {
+    width: 8vw;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1920px) {
+  main section img {
+    width: 7vw;
   }
 }
 /*# sourceMappingURL=index.css.map */
