@@ -1,18 +1,18 @@
-import React from 'react'
+import React from "react";
 import { useHouses } from "../Hooks/useHouses";
 
-const Houses :React.FC = () => {
+const Houses: React.FC = () => {
   //   const { listOfHouses } = useHouses(regionName);
 
-  return(
+  return (
     <div>
-       {/* {listOfHouses
+      {/* {listOfHouses
             .filter((house) => filterByHouseName(house.name, searchInput))
             .map((house, index) => (
             <ol key={index}>{house.name}</ol>
             ))} */}
     </div>
-  )
-}
+  );
+};
 
-export default Houses 
+export default Houses;

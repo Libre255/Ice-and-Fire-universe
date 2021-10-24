@@ -6,7 +6,6 @@ interface Props {
 }
 
 const Regions: React.FC<Props> = ({ regionInfo }) => {
-
   return (
     <section>
       <img src={regionInfo.imgUrl} alt="Region Logo" />
