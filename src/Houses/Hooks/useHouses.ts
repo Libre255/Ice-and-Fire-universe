@@ -7,14 +7,14 @@ interface UseHousesHook {
   error: Error | undefined;
 }
 
-export const useHouses = (): UseHousesHook => {
+export const useHouses = (regionName: string): UseHousesHook => {
   const [listOfHouses, setListOfHouses] = useState<HouseType[]>([]);
   const [error, setError] = useState<Error>();
 
   useEffect(() => {
     (async () => {
       try {
-        const housesData = await getHouses();
+        const housesData = await getHouses(regionName);
         if (!housesData)
           throw new Error(
             "Couldnt not fetch houses, error occured at useHouses hook"
@@ -26,7 +26,7 @@ export const useHouses = (): UseHousesHook => {
         }
       }
     })();
-  }, []);
+  }, [regionName]);
 
   return { listOfHouses, error };
 };
