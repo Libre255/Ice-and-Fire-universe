@@ -1,0 +1,63 @@
+
+.button {
+    border: 2px solid #ffffff;
+    height: 4vh;
+    width:20vw;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    margin-top: 3vw;
+    margin-bottom: 0.1vw;
+    color: whitesmoke;
+    font-size: clamp(1em, 3vw, 1.5em);
+    &::after {
+        content: "Exit";
+        position: absolute;
+        top:20%;
+        left:50%;
+        transform: translate(-50%);
+        color: #ffffff;
+        transition: all 0.1s linear;
+    }
+  
+    &:hover {
+      &::before {
+        opacity: 1;
+        animation: star 1.3s linear infinite;
+      }
+  
+      &::after {
+        text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 20px #82bedc,
+          0 0 30px #82bedc, 0 0 40px #82bedc, 0 0 50px #82bedc, 0 0 60px #82bedc;
+      }
+    }
+}
+
+@include iPadLand{
+  .button{
+    margin-top: 1vw;
+    width: 8vw;
+    &::after {
+      top:10%;
+      left:50%;
+    }
+  }
+}
+
+@include LaptopVersion{
+  .button{
+    width: 6vw;
+    &::after {
+      top:1%;
+    }
+  }
+}
+
+@include Full1080pVersion{
+  .button{
+    &::after {
+      top:20%;
+    }
+  }
+}

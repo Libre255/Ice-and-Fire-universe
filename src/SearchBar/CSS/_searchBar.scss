@@ -1,0 +1,12 @@
+fieldset{
+    color:white;
+    margin-bottom: .5vw;
+}
+@include Full1080pVersion{
+    fieldset{
+        input{
+            width: 10vw;
+        }
+    }
+}
+

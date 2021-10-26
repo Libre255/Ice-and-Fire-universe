@@ -6,7 +6,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #010001;
-    width: 100vw;
+    
 }
 
 code {
@@ -23,4 +23,6 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 @import './Common/CSS/CustomMixins';
 @import './Common/CSS/Hero';
 @import './Logo/CSS/Logo';
+@import './Houses/CSS/RegionsList';
+@import './SearchBar/CSS/searchBar';
 @import './Houses/CSS/HousesList';

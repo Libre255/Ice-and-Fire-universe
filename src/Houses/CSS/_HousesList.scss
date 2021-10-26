@@ -1,61 +1,70 @@
-main{
+@import './ButtonEffect';
+#HousesContainer{
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 5vw;
-
-    section{
-        padding-bottom: 2vw;
-    
-        img{
-            width: 35vw;
-            border: 3px solid black;
-            border-radius: 100px;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+    background-color: black;
+    border-radius: 50px;
+    border: 1px solid whitesmoke;
+    #HousesFlex{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow: scroll;
+        .House{
+            @include flexCenter();
+            width: clamp(10vw, 25vw, 40vw);
+            height: 10vh;
+            font-family: 'got font';
+            font-size: clamp(0.5em, .7vw, 1em);
+            text-align: center;
+            color: black;
+            line-height: 1.7em;
+            letter-spacing: 1px;
+            margin:1vw;
+            border: 1px solid rgb(70, 68, 68);
+            border-radius: 10px;
+            background-color: whitesmoke;
+            padding: clamp(0.2vw, 1vw, 2vw);
             &:hover{
                 box-shadow: 0 0 20px rgb(255, 255, 255);
-            }
-            
-        }
-    }
-}
-
-@include iPadPort{
-    main{
-        section{
-            img{
-                width: 25vw;
+                cursor: pointer;
             }
         }
     }
 }
 
-@include iPadLand {
-    main{
-        margin-top: 0;
-        section{
-            img{
-                width: 15vw;
+@include iPadLand{
+    #HousesContainer{
+        #HousesFlex{
+            .House{
+                width: clamp(10vw, 23vw, 40vw);
             }
         }
     }
 }
 
-@include LaptopVersion {
-    main{
-        margin-top: 0;
-        section{
-            img{
-                width: 8vw;
+@include LaptopVersion{
+    #HousesContainer{
+        #HousesFlex{
+            .House{
+                margin: .3vw;
+                width:clamp(6vw, 10vw, 40vw);
             }
         }
     }
 }
 
 @include Full1080pVersion {
-    main{
-        section{
-            img{
-                width: 7vw;
+    #HousesContainer{
+        #HousesFlex{
+            .House{
+                width: clamp(4vw, 7vw, 12vw);
+                padding: clamp(0.2vw, .7vw, 2vw);
             }
         }
     }
