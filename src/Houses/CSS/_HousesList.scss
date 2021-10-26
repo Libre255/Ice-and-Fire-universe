@@ -9,6 +9,7 @@
     position: absolute;
     background-color: black;
     border-radius: 50px;
+    border: 1px solid whitesmoke;
     #HousesFlex{
         display: flex;
         justify-content: center;
@@ -19,7 +20,7 @@
             width: clamp(10vw, 25vw, 40vw);
             height: 10vh;
             font-family: 'got font';
-            font-size: clamp(0.5em, 1.5vw, 1em);
+            font-size: clamp(0.5em, .7vw, 1em);
             text-align: center;
             color: black;
             line-height: 1.7em;
@@ -51,6 +52,7 @@
     #HousesContainer{
         #HousesFlex{
             .House{
+                margin: .3vw;
                 width:clamp(6vw, 10vw, 40vw);
             }
         }
@@ -61,9 +63,8 @@
     #HousesContainer{
         #HousesFlex{
             .House{
-                margin: 0.3vw;
                 width: clamp(4vw, 7vw, 12vw);
-                padding: clamp(0.2vw, 1.5vw, 2vw);
+                padding: clamp(0.2vw, .7vw, 2vw);
             }
         }
     }

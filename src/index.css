@@ -187,6 +187,17 @@ main section img:hover {
   }
 }
 
+fieldset {
+  color: white;
+  margin-bottom: .5vw;
+}
+
+@media (orientation: landscape) and (min-width: 1920px) {
+  fieldset input {
+    width: 10vw;
+  }
+}
+
 .button {
   border: 2px solid #ffffff;
   height: 4vh;
@@ -195,7 +206,8 @@ main section img:hover {
   position: relative;
   cursor: pointer;
   font-family: "Roboto", sans-serif;
-  margin: .5vw;
+  margin-top: 3vw;
+  margin-bottom: 0.1vw;
   color: whitesmoke;
   font-size: clamp(1em, 3vw, 1.5em);
 }
@@ -224,6 +236,7 @@ main section img:hover {
 
 @media (min-width: 1024px) {
   .button {
+    margin-top: 1vw;
     width: 8vw;
   }
   .button::after {
@@ -238,6 +251,12 @@ main section img:hover {
   }
   .button::after {
     top: 1%;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1920px) {
+  .button::after {
+    top: 20%;
   }
 }
 
@@ -258,6 +277,7 @@ main section img:hover {
   position: absolute;
   background-color: black;
   border-radius: 50px;
+  border: 1px solid whitesmoke;
 }
 
 #HousesContainer #HousesFlex {
@@ -285,7 +305,7 @@ main section img:hover {
   width: clamp(10vw, 25vw, 40vw);
   height: 10vh;
   font-family: 'got font';
-  font-size: clamp(0.5em, 1.5vw, 1em);
+  font-size: clamp(0.5em, 0.7vw, 1em);
   text-align: center;
   color: black;
   line-height: 1.7em;
@@ -311,15 +331,15 @@ main section img:hover {
 
 @media (min-width: 1440px) {
   #HousesContainer #HousesFlex .House {
+    margin: .3vw;
     width: clamp(6vw, 10vw, 40vw);
   }
 }
 
 @media (orientation: landscape) and (min-width: 1920px) {
   #HousesContainer #HousesFlex .House {
-    margin: 0.3vw;
     width: clamp(4vw, 7vw, 12vw);
-    padding: clamp(0.2vw, 1.5vw, 2vw);
+    padding: clamp(0.2vw, 0.7vw, 2vw);
   }
 }
 /*# sourceMappingURL=index.css.map */

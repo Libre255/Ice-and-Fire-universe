@@ -7,7 +7,8 @@
     position: relative;
     cursor: pointer;
     font-family: "Roboto", sans-serif;
-    margin: .5vw;
+    margin-top: 3vw;
+    margin-bottom: 0.1vw;
     color: whitesmoke;
     font-size: clamp(1em, 3vw, 1.5em);
     &::after {
@@ -35,6 +36,7 @@
 
 @include iPadLand{
   .button{
+    margin-top: 1vw;
     width: 8vw;
     &::after {
       top:10%;
@@ -48,6 +50,14 @@
     width: 6vw;
     &::after {
       top:1%;
+    }
+  }
+}
+
+@include Full1080pVersion{
+  .button{
+    &::after {
+      top:20%;
     }
   }
 }
