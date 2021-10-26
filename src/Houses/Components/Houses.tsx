@@ -1,18 +1,11 @@
 import React from "react";
-import { useHouses } from "../Hooks/useHouses";
+import { HouseType } from "../../Service/HouseType";
 
-const Houses: React.FC = () => {
-  //   const { listOfHouses } = useHouses(regionName);
-
-  return (
-    <div>
-      {/* {listOfHouses
-            .filter((house) => filterByHouseName(house.name, searchInput))
-            .map((house, index) => (
-            <ol key={index}>{house.name}</ol>
-            ))} */}
-    </div>
-  );
+interface Props {
+  HouseInfo: HouseType;
+}
+const House: React.FC<Props> = ({ HouseInfo }) => {
+  return <div className="House">{HouseInfo.name}</div>;
 };
 
-export default Houses;
+export default House;

@@ -2,13 +2,13 @@ export interface RegionsType {
   name: string;
   imgUrl: string;
 }
-export const regions: RegionsType[] = [
+export const regionsList: RegionsType[] = [
   {
     name: "the North",
     imgUrl: "/img/1.png",
   },
   {
-    name: "the Iron Islands",
+    name: "Iron Islands",
     imgUrl: "/img/4.png",
   },
   {

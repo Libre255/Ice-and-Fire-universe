@@ -4,7 +4,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #010001;
-  width: 100vw;
 }
 
 code {
@@ -139,6 +138,7 @@ main {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-top: 5vw;
+  position: relative;
 }
 
 main section {
@@ -154,6 +154,7 @@ main section img {
 main section img:hover {
   -webkit-box-shadow: 0 0 20px white;
           box-shadow: 0 0 20px white;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -183,6 +184,142 @@ main section img:hover {
 @media (orientation: landscape) and (min-width: 1920px) {
   main section img {
     width: 7vw;
+  }
+}
+
+.button {
+  border: 2px solid #ffffff;
+  height: 4vh;
+  width: 20vw;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  margin: .5vw;
+  color: whitesmoke;
+  font-size: clamp(1em, 3vw, 1.5em);
+}
+
+.button::after {
+  content: "Exit";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  color: #ffffff;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+.button:hover::before {
+  opacity: 1;
+  -webkit-animation: star 1.3s linear infinite;
+          animation: star 1.3s linear infinite;
+}
+
+.button:hover::after {
+  text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 20px #82bedc, 0 0 30px #82bedc, 0 0 40px #82bedc, 0 0 50px #82bedc, 0 0 60px #82bedc;
+}
+
+@media (min-width: 1024px) {
+  .button {
+    width: 8vw;
+  }
+  .button::after {
+    top: 10%;
+    left: 50%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .button {
+    width: 6vw;
+  }
+  .button::after {
+    top: 1%;
+  }
+}
+
+#HousesContainer {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+  position: absolute;
+  background-color: black;
+  border-radius: 50px;
+}
+
+#HousesContainer #HousesFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: scroll;
+}
+
+#HousesContainer #HousesFlex .House {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: clamp(10vw, 25vw, 40vw);
+  height: 10vh;
+  font-family: 'got font';
+  font-size: clamp(0.5em, 1.5vw, 1em);
+  text-align: center;
+  color: black;
+  line-height: 1.7em;
+  letter-spacing: 1px;
+  margin: 1vw;
+  border: 1px solid #464444;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  padding: clamp(0.2vw, 1vw, 2vw);
+}
+
+#HousesContainer #HousesFlex .House:hover {
+  -webkit-box-shadow: 0 0 20px white;
+          box-shadow: 0 0 20px white;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  #HousesContainer #HousesFlex .House {
+    width: clamp(10vw, 23vw, 40vw);
+  }
+}
+
+@media (min-width: 1440px) {
+  #HousesContainer #HousesFlex .House {
+    width: clamp(6vw, 10vw, 40vw);
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1920px) {
+  #HousesContainer #HousesFlex .House {
+    margin: 0.3vw;
+    width: clamp(4vw, 7vw, 12vw);
+    padding: clamp(0.2vw, 1.5vw, 2vw);
   }
 }
 /*# sourceMappingURL=index.css.map */

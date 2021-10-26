@@ -1,0 +1,62 @@
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 5vw;
+    position: relative;
+    section{
+        padding-bottom: 2vw;
+        img{
+            width: 35vw;
+            border: 3px solid black;
+            border-radius: 100px;
+            &:hover{
+                box-shadow: 0 0 20px rgb(255, 255, 255);
+                cursor: pointer;
+            }
+            
+        }
+    }
+}
+
+@include iPadPort{
+    main{
+        section{
+            img{
+                width: 25vw;
+            }
+        }
+    }
+}
+
+@include iPadLand {
+    main{
+        margin-top: 0;
+        section{
+            img{
+                width: 15vw;
+            }
+        }
+    }
+}
+
+@include LaptopVersion {
+    main{
+        margin-top: 0;
+        section{
+            img{
+                width: 8vw;
+            }
+        }
+    }
+}
+
+@include Full1080pVersion {
+    main{
+        section{
+            img{
+                width: 7vw;
+            }
+        }
+    }
+}
