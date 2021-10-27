@@ -18,15 +18,9 @@
         left:50%;
         transform: translate(-50%);
         color: #ffffff;
-        transition: all 0.1s linear;
     }
   
     &:hover {
-      &::before {
-        opacity: 1;
-        animation: star 1.3s linear infinite;
-      }
-  
       &::after {
         text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 20px #82bedc,
           0 0 30px #82bedc, 0 0 40px #82bedc, 0 0 50px #82bedc, 0 0 60px #82bedc;
@@ -39,7 +33,7 @@
     margin-top: 1vw;
     width: 8vw;
     &::after {
-      top:10%;
+      top:8%;
       left:50%;
     }
   }
@@ -49,15 +43,7 @@
   .button{
     width: 6vw;
     &::after {
-      top:1%;
-    }
-  }
-}
-
-@include Full1080pVersion{
-  .button{
-    &::after {
-      top:20%;
+      top:12%;
     }
   }
 }

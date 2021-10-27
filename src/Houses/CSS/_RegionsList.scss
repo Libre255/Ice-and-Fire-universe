@@ -44,6 +44,7 @@ main{
     main{
         margin-top: 0;
         section{
+            margin: .5vw;
             img{
                 width: 8vw;
             }
@@ -54,6 +55,7 @@ main{
 @include Full1080pVersion {
     main{
         section{
+            margin: 0;
             img{
                 width: 7vw;
             }
