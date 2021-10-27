@@ -7,7 +7,7 @@ import HousesContainer from "./Houses/Components/HousesContainer";
 
 const App: React.FC = () => {
   const [closeRegionBtn, setCloseRegionBtn] = useState<boolean>(true);
-  const [housesList, setHousesList] = useState<HouseType[]>([]);
+  const [housesOfARegion, setHousesOfARegion] = useState<HouseType[]>([]);
 
   return (
     <div id="hero">
@@ -18,13 +18,13 @@ const App: React.FC = () => {
             <Region
               key={index}
               regionSettings={[region, setCloseRegionBtn]}
-              setHousesList={setHousesList}
+              setHousesOfARegion={setHousesOfARegion}
             />
           ))}
           {closeRegionBtn || (
             <HousesContainer
               setCloseRegionBtn={setCloseRegionBtn}
-              houses={housesList}
+              housesOfARegion={housesOfARegion}
             />
           )}
         </main>

@@ -3,37 +3,50 @@ import { HouseType } from "../../Service/HouseType";
 import House from "./Houses";
 import SearchBar from "../../SearchBar/Components/SearchBar";
 import { filterByHouseName } from "../../SearchBar/Methods/filterByHouseName";
+import ExitBtn from "./ExitBtn";
+import HouseInfo from "./HouseInfo";
 interface Props {
   setCloseRegionBtn: React.Dispatch<React.SetStateAction<boolean>>;
-  houses: HouseType[];
+  housesOfARegion: HouseType[];
 }
 
-const HousesContainer: React.FC<Props> = ({ setCloseRegionBtn, houses }) => {
+const HousesContainer: React.FC<Props> = ({
+  setCloseRegionBtn,
+  housesOfARegion,
+}) => {
   const [searchInput, setSearchInput] = useState<string>("");
+  const [houseData, setHouseData] = useState<HouseType>();
+  const [closeHouseInfo, setcloseHouseInfo] = useState<boolean>(true);
   const myref = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     myref.current!.scrollIntoView();
   }, []);
 
   return (
-    <div id="HousesContainer" ref={myref}>
-      <div
-        id="CloseRegionBtn"
-        className="button"
-        onClick={() => setCloseRegionBtn(true)}
-      />
+    <section id="HousesContainer" ref={myref}>
+      <ExitBtn onClick={() => setCloseRegionBtn(true)} />
       <SearchBar
-        listOfHouses={houses}
+        listOfHouses={housesOfARegion}
         searchState={[searchInput, setSearchInput]}
       />
-      <div id="HousesFlex">
-        {houses
+      <article id="HousesFlex">
+        {housesOfARegion
           .filter((house) => filterByHouseName(house.name, searchInput))
           .map((house, index) => (
-            <House key={index} HouseInfo={house} />
+            <House
+              key={index}
+              houseSettings={[house, setcloseHouseInfo, setHouseData]}
+            />
           ))}
-      </div>
-    </div>
+      </article>
+      {closeHouseInfo || (
+        <HouseInfo
+          setcloseHouseInfo={setcloseHouseInfo}
+          houseData={houseData}
+        />
+      )}
+    </section>
   );
 };
 
