@@ -18,7 +18,9 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   font-family: 'got font';
   src: url('Common/Fonts/Game\ of\ Thrones.ttf');
 }
-
+.errorMsg{
+  color:rgb(255, 255, 255);
+}
 @import './Common/CSS/MediaQueryMixins';
 @import './Common/CSS/CustomMixins';
 @import './Common/CSS/Hero';
