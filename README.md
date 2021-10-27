@@ -1,4 +1,4 @@
-npm install if its the first time, then npm start to run the app :)
+npm install if its the first time, then npm start to run the app.
 
 All Houses are sorted by regions. 
 
