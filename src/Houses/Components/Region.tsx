@@ -5,15 +5,15 @@ import { RegionsType } from "../Variabels/regions";
 
 interface Props {
   regionSettings: [RegionsType, React.Dispatch<React.SetStateAction<boolean>>];
-  setHousesList: React.Dispatch<React.SetStateAction<HouseType[]>>;
+  setHousesOfARegion: React.Dispatch<React.SetStateAction<HouseType[]>>;
 }
 
-const Region: React.FC<Props> = ({ regionSettings, setHousesList }) => {
+const Region: React.FC<Props> = ({ regionSettings, setHousesOfARegion }) => {
   const [regionInfo, setCloseRegionBtn] = regionSettings;
   const { listOfHouses } = useHouses(regionInfo.name);
   const onRegionClick = () => {
     setCloseRegionBtn(false);
-    setHousesList(listOfHouses);
+    setHousesOfARegion(listOfHouses);
   };
   return (
     <section>
