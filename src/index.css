@@ -15,6 +15,10 @@ code {
   src: url("Common/Fonts/Game of Thrones.ttf");
 }
 
+.errorMsg {
+  color: white;
+}
+
 #hero {
   width: 100vw;
   height: 100vh;

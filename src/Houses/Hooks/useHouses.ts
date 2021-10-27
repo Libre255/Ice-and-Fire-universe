@@ -17,7 +17,7 @@ export const useHouses = (regionName: string): UseHousesHook => {
         const housesData = await getHouses(regionName);
         if (!housesData)
           throw new Error(
-            "Couldnt not fetch houses, error occured at useHouses hook"
+            `Couldnt not fetch houses from region: ${regionName}, error occured at useHouses hook`
           );
         setListOfHouses(housesData);
       } catch (err) {

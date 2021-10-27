@@ -10,11 +10,16 @@ interface Props {
 
 const Region: React.FC<Props> = ({ regionSettings, setHousesOfARegion }) => {
   const [regionInfo, setCloseRegionBtn] = regionSettings;
-  const { listOfHouses } = useHouses(regionInfo.name);
+  const { listOfHouses, error } = useHouses(regionInfo.name);
+
   const onRegionClick = () => {
     setCloseRegionBtn(false);
     setHousesOfARegion(listOfHouses);
   };
+
+  if (error) {
+    return <h2 className="errorMsg">{error.message}</h2>;
+  }
   return (
     <section>
       <img src={regionInfo.imgUrl} alt="Region Logo" onClick={onRegionClick} />
